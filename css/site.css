@@ -1,23 +1,32 @@
 @font-face {
-  font-family: 'Do Hyeon';
-  src: url('../fonts/DoHyeon-Regular.ttf');
+  font-family: 'Assistant';
+  src: url('../fonts/Assistant-Regular.ttf');
 }
 
 .container {
-  font-family: 'Do Hyeon', Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Assistant', Verdana, Geneva, Tahoma, sans-serif;
+  font-style: bold;
 }
 
 #voting{
-  background-color: rgba(255, 255, 255, 0.80);
+  border-radius: 40px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  margin-bottom: 85px;
 }
 
 body { 
   background: url(../images/header.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-bottom: 85px;
+}
+
+.screen{
+  background-color: rgba(255, 255, 255, 0.60);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -31,23 +40,27 @@ body {
 
 #headertext {
   font-size: 40px;
-  /*display:table;
-  margin:0 auto;*/
+  display:table;
+  margin:0 auto;
 }
 
 #vraag textarea {
-    font-size: 35px;
-    border-radius: 0px;    
-}
+    font-size: 40px;
+    border-radius: 40px;
+  }
 
 #text{
     text-align: left;
     font-size: 18px;
+    filter: grayscale(100%);
+    
 }
 
 #gent{
     height: 75px;
     padding: 5px;
+    filter: grayscale(100%);
+    
 }
 
 #foresight{
@@ -62,30 +75,34 @@ textarea{
 
 #antw1 textarea, #antw2 textarea {
     font-size: 35px;  
-    color: #fff;    
-}
+color : #212529;}
 
 #antw1 textarea{
-    background-color: green;
-    border-radius: 0px;    
+    background-color: #8BC297;
+    border-color: #8BC297;
+    border-radius: 40px;    
     padding: 15px;
+    font-size: 35px;
   }
 
 #antw2 textarea{
-    background-color: red;
-    border-radius: 0px;
-    padding: 15px;    
+    background-color: #DC6966;
+    border-color: #DC6966;
+    border-radius: 40px;
+    padding: 15px;   
+    font-size: 35px;
+    
 }
 
 #score{
-    font-size: 35px;
+    font-size: 50px;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
 
 #countdown{   
-     font-size: 30px;
+     font-size: 45px;
 }
 
 html, body {
@@ -167,7 +184,8 @@ html, body {
 }
 
 .btn{
-  border-radius: 0px;
-  
+  border-radius:15px;
+  padding: 10px;
+ 
 }
 
