@@ -2,35 +2,30 @@
   font-family: 'Assistant';
   src: url('../fonts/Assistant-Regular.ttf');
 }
+@font-face {
+  font-family: 'Assistant ExtraBold';
+  src: url('../fonts/Assistant-ExtraBold.ttf');
+}
 
 .container {
-  font-family: 'Assistant', Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Assistant ExtraBold', Verdana, Geneva, Tahoma, sans-serif;
   font-style: bold;
 }
 
-#voting{
-  border-radius: 40px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-body { 
+html { 
   background: url(../images/header.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  padding-bottom: 85px;
-}
+  background-size: cover;}
 
-.screen{
-  background-color: rgba(255, 255, 255, 0.60);
+
+body{
+  background-color: rgba(255,255,255,0.40);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover;    
 }
 
 .row{
@@ -51,16 +46,12 @@ body {
 
 #text{
     text-align: left;
-    font-size: 18px;
-    filter: grayscale(100%);
-    
+    font-size: 18px;    
 }
 
 #gent{
     height: 75px;
-    padding: 5px;
-    filter: grayscale(100%);
-    
+    padding: 5px;    
 }
 
 #foresight{
@@ -95,26 +86,24 @@ color : #212529;}
 }
 
 #score{
-    font-size: 50px;
+    font-size: 60px;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
 
+#vs{font-size: 20px;
+  vertical-align: bottom ;
+  line-height: 110px;}
+
+
 #countdown{   
      font-size: 45px;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
 }
 
 .blur-it {
   filter: blur(4px);
 }
-
 
 .modal-wrapper {
   width: 100%;
@@ -186,6 +175,4 @@ html, body {
 .btn{
   border-radius:15px;
   padding: 10px;
- 
 }
-
