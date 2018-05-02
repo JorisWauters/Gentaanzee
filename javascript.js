@@ -1,6 +1,6 @@
 var groen = 0, rood = 0;
 var afgelopen = true;
-
+var myTimeout;
 
 $(this).on('keypress', function (event) {
     if (!afgelopen) {
@@ -19,11 +19,6 @@ $(this).on('keypress', function (event) {
 
 function countdown(minutes) {
     afgelopen = false;
-    groen = 0;
-    rood = 0;
-    document.getElementById("teller1").innerHTML = groen;
-    document.getElementById("teller2").innerHTML = rood;
-
     var seconds = 60;
     var mins = minutes
     function tick() {
@@ -32,7 +27,7 @@ function countdown(minutes) {
         seconds--;
         counter.innerHTML = (current_minutes < 10 ? "0" : "") + current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
         if (seconds > 0) {
-            setTimeout(tick, 1000);
+            myTimeout = setTimeout(tick, 1000);
         } else {
             if (mins > 1) {
                 countdown(mins - 1);
@@ -47,3 +42,23 @@ function countdown(minutes) {
     }
     tick();
 }
+
+function stop (){
+    afgelopen = true;
+    clearTimeout(myTimeout);
+}
+function reset() {
+    groen = 0;
+    rood = 0;
+    document.getElementById("teller1").innerHTML = groen;
+    document.getElementById("teller2").innerHTML = rood;
+    document.getElementById("countdown").innerHTML = "05:00";
+ }
+
+ $( document ).ready(function() {
+    $('.trigger').on('click', function() {
+       $('.modal-wrapper').toggleClass('open');
+      $('.page-wrapper').toggleClass('blur-it');
+       return false;
+    });
+  });
