@@ -1,61 +1,64 @@
 <!doctype html>
 <html lang="nl">
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="css/site.css">
     <link rel="stylesheet" href="fonts/css/fontawesome-all.css">
+    <link rel="stylesheet" href="css/animate.css">
 
     <title>Votingtool</title>
 </head>
-
 <body>
     <div class="container">
         <div class="row">
-            <div class="col" id="vraag">
-                <textarea type="text" class="form-control"></textarea>
-            </div>
+            <span id="headertext">Stem hier uw favoriete toekomstbeeld</span>
         </div>
-        <div class="row">
-            <div class="col-sm-4" id="antw1">
-                <textarea type="text" class="form-control" rows="5"></textarea>
-            </div>
-            <div class="col-sm-4">
-                <div class="row" id="score">
-                    <span class="col-sm-4" id="teller1">0</span>
-                    <span class="col-sm-4" id="vs">VS</span>
-                    <span class="col-sm-4" id="teller2">0</span>
-                    </p>
+        <div id="voting">
+            <div class="row">
+                <div class="col" id="vraag">
+                    <textarea type="text" id="vraagTxt" class="form-control"></textarea>
                 </div>
             </div>
-            <div class="col-sm-4" id="antw2">
-                <textarea type="text" class="form-control" rows="5"></textarea>
+            <div class="row">
+                <div class="col-sm-4" id="antw1">
+                    <textarea type="text" class="form-control" id="antw1Txt" rows="5"></textarea>
+                </div>
+                <div class="col-sm-4">
+                    <div class="row" id="score">
+                        <span class="col-sm-4" id="teller1">0</span>
+                        <span class="col-sm-4" id="vs">VS</span>
+                        <span class="col-sm-4" id="teller2">0</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-4" id="antw2">
+                    <textarea type="text" class="form-control" id="antw2Txt" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12" id="countdown">05:00</div>
+                <div class="col-sm-12" id="start">
+                    <button onclick="countdown(5)" type="button" class="btn btn-warning">START</button>
+                    <button onclick="stop()" type="button" class="btn btn-warning">STOP</button>
+                    <button onclick="reset()" type="button" class="btn btn-warning">RESET</button>
+                </div>
+            </div>
+            <div class="row" id="text">
+                <p class="col" id="images">
+                    <span> Voor meer prikkelende ideeën over de rol van technologie in een Gent zonder fossiele brandstoffen? Bezoek
+                        tussen 18 en 28 mei de tentoonstelling 'Post-Fossiel Gent in Nest'. Meer info
+                        <a href="http://post-fossiel.gent/" target="_blank">www.post-fossiel.gent</a>
+                    </span>
+                </p>
+                <img src="images/logo-gent.png" class="rounded " id="gent" alt="gent logo">
+                <img src="images/logo-digipolis-foresight.png" class="rounded " id="foresight" alt="foresight logo">
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-12" id="countdown">05:00</div>
-            <div class="col-sm-12" id="start">
-                <button onclick="countdown(5)" type="button" class="btn btn-warning">START</button>
-                <button onclick="stop()" type="button" class="btn btn-warning">STOP</button>
-                <button onclick="reset()" type="button" class="btn btn-warning">RESET</button>
-            </div>
-        </div>
-        <div class="row" id="text">
-            <span> Voor meer prikkelende ideeën over de rol van technologie in een Gent zonder fossiele brandstoffen?
-                <br> Bezoek tussen 18 en 28 mei de tentoonstelling 'Post-Fossiel Gent in Nest'. Meer info
-                <a href="http://post-fossiel.gent/">www.post-fossiel.gent</a>
-            </span>
-        </div>
-        <p class="col" id="images">
-            <img src="images/logo-digipolis-foresight.png" class="rounded float-right" id="foresight" alt="foresight logo">
-            <img src="images/logo-gent.png" class="rounded float-right" id="gent" alt="gent logo">            
-        </p>
         <!-- Modal -->
         <div class="modal-wrapper">
             <div class="modal">
@@ -67,7 +70,9 @@
                 <div class="content">
                     <div class="good-job">
                         <i class="far fa-clock" aria-hidden="true"></i>
-                      <p>  <h1>Afgelopen!</h1></p>
+                        <p>
+                            <h1>Afgelopen!</h1>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -81,7 +86,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
-    <script src="javascript.js"></script>
+    <script src="js/javascript.js"></script>
+    <script src="js/html2canvas.min.js"></script>
 </body>
-
 </html>
