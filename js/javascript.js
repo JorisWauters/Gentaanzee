@@ -91,7 +91,7 @@ $(document).ready(function () {
     setVerticalAlign('#antw1Txt');
     setVerticalAlign('#antw2Txt');
     setVerticalAlign('#vraagTxt');
-    localStorage.clear();
+   // localStorage.clear();
 });
 
 function setVerticalAlign(input) {
