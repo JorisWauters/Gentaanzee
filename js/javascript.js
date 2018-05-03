@@ -4,11 +4,11 @@ var myTimeout;
 
 
 // op keypresses rood en groen 
-$(this).on('keypress', function (event) {
+$(this).on('keyup', function (event) {
     if (!afgelopen) {
         if (event.keyCode == 82) {
             //  alert('Rood gedrukt!')
-            rood++;
+            rood = rood +1;
             document.getElementById("teller2").innerHTML = rood;
             $('#antw2Txt').addClass('animated tada').one('animationend', function () {
                 $(this).removeClass('animated tada')
