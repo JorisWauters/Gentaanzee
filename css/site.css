@@ -27,7 +27,6 @@ body{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-padding-bottom: 200px;
 /*height: 100vh;*/ /* VERWIJDER DIT VOOR DE OVERLAY DOOR TE TREKKEN TOT ONDERAAN HET SCHERM */
 }
 
