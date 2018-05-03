@@ -25,6 +25,7 @@ $(this).on('keyup', function (event) {
     }
 })
 
+
 // timer die aftelt 
 function countdown(minutes) {
     afgelopen = false;
