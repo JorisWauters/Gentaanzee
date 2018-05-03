@@ -91,6 +91,7 @@ $(document).ready(function () {
     setVerticalAlign('#antw1Txt');
     setVerticalAlign('#antw2Txt');
     setVerticalAlign('#vraagTxt');
+    localStorage.clear();
 });
 
 function setVerticalAlign(input) {
@@ -107,7 +108,7 @@ function setVerticalAlign(input) {
     });
 }
 
-var jsonArray = [];
+var jsonArray =[];
 
 $('#foresight').on("click", function () {
     function writeToFile() {
@@ -135,7 +136,17 @@ function getInfo() {
     var teller2 = rood;
 
     var obj = { "vraag": vraagTxt, "antwoord groen": antw1Txt, "stemmen groen": teller1, "antwoord rood": antw2Txt, "stemmen rood": teller2 };
-    jsonArray.push(obj);
+
+    if (typeof (Storage) !== "undefined") {
+        var temp = JSON.parse(localStorage.getItem("post-fossiel"));
+        if (temp === null) {
+            jsonArray = [];
+        } else
+            jsonArray = temp;
+
+        jsonArray.push(obj);
+        localStorage.setItem("post-fossiel", JSON.stringify(jsonArray));
+    }
 
     console.log(obj);
 }
