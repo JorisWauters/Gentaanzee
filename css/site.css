@@ -27,7 +27,9 @@ body{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-padding-bottom: 200px;}
+padding-bottom: 200px;
+/*height: 100vh;*/ /* VERWIJDER DIT VOOR DE OVERLAY DOOR TE TREKKEN TOT ONDERAAN HET SCHERM */
+}
 
 .row{
     text-align: center;
@@ -46,8 +48,16 @@ padding-bottom: 200px;}
   }
 
 #text{
-    text-align: left;
-    font-size: 18px;
+  /*position: fixed;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  max-width: 1140px;
+  margin: auto;*/ /* VERWIJDER DIT ALS JE DE BANNER STEEDS ONDERAAN WILT HEBBEN */
+
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: left;
+  font-size: 20px;
 }
 
 #gent{
@@ -56,6 +66,8 @@ padding-bottom: 200px;}
 }
 
 #foresight{
+  margin-top: 9px;
+  margin-left: 10px;
     height: 55px;
     padding: 3px;
 }
@@ -176,4 +188,15 @@ color : #212529;}
 .btn{
   border-radius:15px;
   padding: 10px;
+}
+
+#images {
+  font-family: 'Assistant';
+  font-weight: bold;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+#images a {
+  color: #000;
 }

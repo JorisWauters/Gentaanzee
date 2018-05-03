@@ -3,7 +3,7 @@ var afgelopen = true;
 var myTimeout;
 
 
-// op keypresses rood en groen 
+// op keypresses rood en groen
 $(this).on('keyup', function (event) {
     if (!afgelopen) {
         if (event.keyCode == 82) {
@@ -15,7 +15,7 @@ $(this).on('keyup', function (event) {
             });
         }
         if (event.keyCode == 71) {
-            //  alert('Groen gedrukt!') 
+            //  alert('Groen gedrukt!')
             groen++;
             document.getElementById("teller1").innerHTML = groen;
             $('#antw1Txt').addClass('animated tada').one('animationend', function () {
@@ -26,7 +26,7 @@ $(this).on('keyup', function (event) {
 })
 
 
-// timer die aftelt 
+// timer die aftelt
 function countdown(minutes) {
     afgelopen = false;
     var seconds = 60;
@@ -75,10 +75,10 @@ function reset() {
     rood = 0;
     document.getElementById("teller1").innerHTML = groen;
     document.getElementById("teller2").innerHTML = rood;
-    document.getElementById("countdown").innerHTML = "05:00";
+    document.getElementById("countdown").innerHTML = "30:00";
 }
 
-// voor eventueel afgelopen modal 
+// voor eventueel afgelopen modal
 $(document).ready(function () {
     $('.trigger').on('click', function () {
         $('.modal-wrapper').toggleClass('open');
