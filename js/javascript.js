@@ -58,6 +58,12 @@ function stop() {
 }
 
 function reset() {
+    afgelopen = true;
+    clearTimeout(myTimeout);
+
+    //info opslaan in array om later weg te schrijven
+    getInfo();
+
     //textvakken leegmaken
     $('#vraagTxt').val('');
     $('#antw1Txt').val('');
@@ -99,4 +105,37 @@ function setVerticalAlign(input) {
             height: h
         });
     });
+}
+
+var jsonArray = [];
+
+$('#foresight').on("click", function () {
+    function writeToFile() {
+        var fileContents = []
+        for (var i = 0; i < jsonArray.length; i++) {
+            fileContents.push(JSON.stringify(jsonArray[i], null, 2));
+        }
+        var fileName = "post-fossiel-data.json";
+
+        var pp = document.createElement('a');
+        pp.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileContents));
+        pp.setAttribute('download', fileName);
+        pp.click();
+    }
+    setTimeout(function () {
+        writeToFile()
+    }, 500);
+});
+
+function getInfo() {
+    var vraagTxt = document.getElementById('vraagTxt').value;
+    var antw1Txt = document.getElementById('antw1Txt').value;
+    var antw2Txt = document.getElementById('antw2Txt').value;
+    var teller1 = groen;
+    var teller2 = rood;
+
+    var obj = { "vraag": vraagTxt, "antwoord groen": antw1Txt, "stemmen groen": teller1, "antwoord rood": antw2Txt, "stemmen rood": teller2 };
+    jsonArray.push(obj);
+
+    console.log(obj);
 }
