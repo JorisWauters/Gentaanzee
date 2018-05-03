@@ -12,8 +12,8 @@
   font-style: bold;
 }
 
-html { 
-  background: url(../images/header.jpg) no-repeat center center fixed; 
+html {
+  background: url(../images/header.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -35,7 +35,7 @@ padding-bottom: 200px;}
 }
 
 #headertext {
-  font-size: 40px;
+  font-size: 60px;
   display:table;
   margin:0 auto;
 }
@@ -47,12 +47,12 @@ padding-bottom: 200px;}
 
 #text{
     text-align: left;
-    font-size: 18px;    
+    font-size: 18px;
 }
 
 #gent{
     height: 75px;
-    padding: 5px;    
+    padding: 5px;
 }
 
 #foresight{
@@ -61,18 +61,18 @@ padding-bottom: 200px;}
 }
 
 textarea{
-    resize: none; 
-    text-align: center;    
+    resize: none;
+    text-align: center;
 }
 
 #antw1 textarea, #antw2 textarea {
-    font-size: 35px;  
+    font-size: 35px;
 color : #212529;}
 
 #antw1 textarea{
     background-color: #8BC297;
     border-color: #8BC297;
-    border-radius: 40px;    
+    border-radius: 40px;
     padding: 15px;
     font-size: 35px;
   }
@@ -81,9 +81,9 @@ color : #212529;}
     background-color: #DC6966;
     border-color: #DC6966;
     border-radius: 40px;
-    padding: 15px;   
+    padding: 15px;
     font-size: 35px;
-    
+
 }
 
 #score{
@@ -98,7 +98,7 @@ color : #212529;}
   line-height: 110px;}
 
 
-#countdown{   
+#countdown{
      font-size: 45px;
 }
 
@@ -110,7 +110,7 @@ color : #212529;}
   width: 100%;
   height: 100%;
   position: fixed;
-  top: 0; 
+  top: 0;
   left: 0;
   background: rgba(0, 0,0, 0.50);
   visibility: hidden;
@@ -129,7 +129,7 @@ color : #212529;}
   display: block;
   margin: 50% 0 0 -300px;
   position: relative;
-  top: 50%; 
+  top: 50%;
   left: 50%;
   background: #fff;
   opacity: 0;
@@ -141,7 +141,7 @@ color : #212529;}
   opacity: 1;
 }
 
-.head { 
+.head {
   width: 90%;
   height: 32px;
   padding: 12px 30px;

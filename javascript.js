@@ -10,7 +10,7 @@ $(this).on('keypress', function (event) {
             document.getElementById("teller2").innerHTML = rood;
         }
         if (event.keyCode == 71) {
-            //  alert('Groen gedrukt!') 
+            //  alert('Groen gedrukt!')
             groen++;
             document.getElementById("teller1").innerHTML = groen;
         }
@@ -52,7 +52,7 @@ function reset() {
     rood = 0;
     document.getElementById("teller1").innerHTML = groen;
     document.getElementById("teller2").innerHTML = rood;
-    document.getElementById("countdown").innerHTML = "05:00";
+    document.getElementById("countdown").innerHTML = "30:00";
  }
 
  $( document ).ready(function() {
